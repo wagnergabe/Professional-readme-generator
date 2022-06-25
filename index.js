@@ -1,5 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
+const util = require("./utils/generateMarkdown");
 
 //Criteria Needed:
 //(DONE)------Title of project 
@@ -12,12 +13,27 @@ const fs = require('fs');
 //links (a) to sections of README
 
 //Video showing prompts 
-
+const questions = [];
+// function writeToFile(index,data) {
 inquirer.prompt([
     {
         type: 'input',
         name: "title",
         message: "What would you like to name your project?"
+    },
+    {
+        type: 'input',
+        name: "github_name",
+        message: "Please provide your GitHub username"
+    },
+    {
+        type: 'input',
+        name: 'user_email',
+        message: "Please supply a valid email"
     }
-        type:
 ])
+// }
+
+// function init() {};
+
+// init();
