@@ -10,3 +10,13 @@ const fs = require('fs');
 //input username(Github)- added to the section of the README entitled Questions, with a link to github profile
 //same with email
 //links (a) to sections of README
+
+//Video showing prompts 
+
+inquirer.prompt([
+    {
+        type: 'input',
+        name: "title",
+        message: "What would you like to name your project?"
+    }
+])
