@@ -1,6 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require("./utils/generateMarkdown");
+const { BADSTR } = require('dns');
 
 //Criteria Needed:
 //(DONE)------Title of project 
@@ -30,7 +31,20 @@ inquirer.prompt([
         type: 'input',
         name: 'user_email',
         message: "Please supply a valid email"
+    },
+    {
+        //https://gist.github.com/qvil/5e3ed56c26d784e51424621119cc4028? (common licenses with badges)
+        type: 'list',
+        name: 'licenses',
+        message: 'Please choose the right license for your project',
+        choices: [
+            "Apache",
+            "MIT",
+            "GPL",
+            "none" 
+        ]
     }
+    
 ])
 // }
 
