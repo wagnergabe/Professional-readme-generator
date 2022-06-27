@@ -68,7 +68,9 @@ inquirer.prompt([
         ]
     }
   
-]);
+]).then((response) => {
+    console.log(response);
+}) 
 
 // }
 
