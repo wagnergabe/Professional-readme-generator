@@ -2,6 +2,7 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require("./utils/generateMarkdown");
 const { BADSTR } = require('dns');
+const { Console } = require('console');
 
 //Criteria Needed:
 //(DONE)------Title of project 
@@ -20,17 +21,39 @@ inquirer.prompt([
     {
         type: 'input',
         name: "title",
-        message: "What would you like to name your project?"
+        message: "What would you like to name your project?",
+        validate: titleInput => {
+            if (titleInput) {
+                return true;
+            } else {
+                console.log ("You really should give this a title...");
+                return false;
+            }
+        }
     },
     {
         type: 'input',
         name: "github_name",
-        message: "Please provide your GitHub username"
+        message: "Please provide your GitHub username",
+        validate: githubInput => {
+            if (githubInput) {
+                return true;
+            } else {
+                console.log("Make up a Github if you're not sure ;-)");
+            }
+        }
     },
     {
         type: 'input',
         name: 'user_email',
-        message: "Please supply a valid email"
+        message: "Please supply a valid email",
+        validate: emailInput => {
+            if (emailInput) {
+                return true;
+            } else {
+                console.log("I promise to keep spam to a minimum....of 100 ads per day");
+            }
+        }
     },
     {
         //https://gist.github.com/qvil/5e3ed56c26d784e51424621119cc4028? (common licenses with badges)
@@ -44,8 +67,9 @@ inquirer.prompt([
             "none" 
         ]
     }
-    
-])
+  
+]);
+
 // }
 
 // function init() {};
