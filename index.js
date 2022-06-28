@@ -1,17 +1,16 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require("./utils/generateMarkdown");
-const { BADSTR } = require('dns');
-const { Console } = require('console');
+
 
 //Criteria Needed:
 //(DONE)------Title of project 
-//sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
+//sections entitled Description*, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
 //Input method for above section
-//license for the application from a list of options (li)
+//(DONE)-------license for the application from a list of options (li)
 //license badge
-//input username(Github)- added to the section of the README entitled Questions, with a link to github profile
-//same with email
+//(DONE)-------input username(Github)- added to the section of the README entitled Questions, with a link to github profile
+//(DONE)------same with email
 //links (a) to sections of README
 
 //Video showing prompts 
@@ -30,6 +29,16 @@ inquirer.prompt([
                 return false;
             }
         }
+    },
+    {  
+        type: 'input',
+        name: "description",
+        message: "What will your project be about?"
+    },
+    {
+        type: 'input',
+        name: "usage",
+        message: "How will you use your app?"
     },
     {
         type: 'input',
@@ -56,7 +65,7 @@ inquirer.prompt([
         }
     },
     {
-        //https://gist.github.com/qvil/5e3ed56c26d784e51424621119cc4028? (common licenses with badges)
+       //shields.io
         type: 'list',
         name: 'licenses',
         message: 'Please choose the right license for your project',
@@ -68,7 +77,8 @@ inquirer.prompt([
         ]
     }
   
-]).then((response) => {
+]).then((response) => {  
+    renderLicenseBadge(license);
     console.log(response);
 }) 
 
