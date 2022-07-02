@@ -25,7 +25,13 @@ function generateMarkdown(data) {
     return `
     # Project Title
     ${data.title}
-    ${data.description}`
+    ${data.description}n\
+    # Table of Contents
+    *[Installation](#-Installation)
+
+    # Installation
+    ${data.installation}
+    `
 }
 
 

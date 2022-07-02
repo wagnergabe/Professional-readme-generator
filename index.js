@@ -15,10 +15,8 @@ const generateMarkdown = require('./utils/generateMarkdown');
 //links (a) to sections of README
 
 //Video showing prompts 
-const questions = [];
-// function writeToFile(index,data) {
-inquirer.prompt([
-    {
+const questions = [
+{
         type: 'input',
         name: "title",
         message: "What would you like to name your project?",
@@ -34,12 +32,12 @@ inquirer.prompt([
     {  
         type: 'input',
         name: "description",
-        message: "What will your project be about?"
+        message: "What will your project be about?",
         validate: descriptionInput => {
             if (descriptionInput) {
             return true;
             } else {
-            console.log ("You really should give this a title...");
+            console.log ("If in doubt, make it about cats!");
             return false;
             }
         }
@@ -47,12 +45,26 @@ inquirer.prompt([
     {
         type: 'input',
         name: "usage",
-        message: "How will you use your app?"
+        message: "How will you use your app?",
+        validate: validateInput => {
+            if(validateInput) {
+                return true;
+            } else {
+                console.log("Options are limited here...")
+            }
+        }
     },
     {
         type: 'input',
         name: "installation",
-        message: "How will you use your app? What commands are needed to run the program?"
+        message: "How will you use your app? What commands are needed to run the program?",
+        validate: installationInput => {
+            if(installationInput) {
+                return true;
+            } else {
+                console.log("install something")
+            }
+        }
     },
     {
         type: 'input',
@@ -90,11 +102,12 @@ inquirer.prompt([
             "none" 
         ]
     }
-  
-]).then((response) => {  
-generateMarkdown(response);
-console.log(response);
-});
+];
+inquirer.prompt(questions)
+// ]).then((response) => {  
+// generateMarkdown(response);
+// console.log(response);
+// });
 
 // }
 
