@@ -1,6 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require("./utils/generateMarkdown");
+const generateMarkdown = require('./utils/generateMarkdown');
 
 
 //Criteria Needed:
@@ -42,6 +43,11 @@ inquirer.prompt([
     },
     {
         type: 'input',
+        name: "installation",
+        message: "How will you use your app? What commands are needed to run the program?"
+    },
+    {
+        type: 'input',
         name: "github_name",
         message: "Please provide your GitHub username",
         validate: githubInput => {
@@ -78,13 +84,9 @@ inquirer.prompt([
     }
   
 ]).then((response) => {  
-    renderLicenseBadge(license);
-    //fs.writeFile('index.html', generatePage(name, github), err => {
-  //if (err) throw err;
-
-  //console.log('Portfolio complete! Check out index.html to see the output!');
+generateMarkdown(response);
+console.log(response);
 });
-}) 
 
 // }
 
