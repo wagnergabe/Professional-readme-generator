@@ -9,6 +9,8 @@ function renderLicenseBadge(license) {
     }
 };
 
+//!!!Call this at the end of the question prompts to generage a badge
+
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {

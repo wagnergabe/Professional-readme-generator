@@ -103,14 +103,17 @@ const questions = [
         ]
     }
 ];
-inquirer.prompt(questions)
-// ]).then((response) => {  
-// generateMarkdown(response);
-// console.log(response);
-// });
+function init() {
+inquirer.prompt(questions).then(function(data) {
+    console.log(data);
+    
+     var content = generateMarkdown(data);
+     console.log(content);
+      fs.writeFile("./ReadMe.md", content, function(err){
+          if (err) throw err
+          console.log("success");
+      });
+ } ); 
+}
 
-// }
-
-// function init() {};
-
-// init();
+init()
