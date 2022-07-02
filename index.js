@@ -45,7 +45,7 @@ const questions = [
     {
         type: 'input',
         name: "usage",
-        message: "How will you use your app?",
+        message: "How do you install your app?",
         validate: validateInput => {
             if(validateInput) {
                 return true;
@@ -93,7 +93,7 @@ const questions = [
     {
        //shields.io
         type: 'list',
-        name: 'licenses',
+        name: 'license',
         message: 'Please choose the right license for your project',
         choices: [
             "Apache",
@@ -103,17 +103,17 @@ const questions = [
         ]
     }
 ];
+
 function init() {
 inquirer.prompt(questions).then(function(data) {
     console.log(data);
-    
      var content = generateMarkdown(data);
      console.log(content);
       fs.writeFile("./ReadMe.md", content, function(err){
           if (err) throw err
           console.log("success");
       });
- } ); 
+ }); 
 }
 
 init()
