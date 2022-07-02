@@ -35,6 +35,14 @@ inquirer.prompt([
         type: 'input',
         name: "description",
         message: "What will your project be about?"
+        validate: descriptionInput => {
+            if (descriptionInput) {
+            return true;
+            } else {
+            console.log ("You really should give this a title...");
+            return false;
+            }
+        }
     },
     {
         type: 'input',
