@@ -22,6 +22,8 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(licenses) {}
 
+//Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
+
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
     renderLicenseBadge()
@@ -32,10 +34,27 @@ function generateMarkdown(data) {
     ${data.description}
 
     ## Table of Contents
-    [Installation](#Installation)
+    *[Installation](#Installation)
+    *[Usage](#usage)
+    *[Contribution](#contribution)
+    *[Test](#test)
+    *[Questions](#questions)
 
-    # Installation
+    ## Installation
     ${data.installation}
+
+    ## Usage
+    ${data.usage}
+
+    ## Contribution
+    ${data.contribution}
+
+    ## Test
+    ${data.test}
+
+    #{Questions}
+    Please contact at: ${data.user_email}/n
+    GitHub: [${data.githubInput}](https://github.com/${data.githubInput})\n
     `
 }
 
