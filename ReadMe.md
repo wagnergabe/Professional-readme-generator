@@ -1,11 +1,11 @@
 
 # Project Title
-fa
+Readme Generator
 
-![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-yellow.svg)
+![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 
 # Description
-ds
+Create a custom Readme
 
 ## Table of Contents
 * [Installation](#installation)
@@ -16,25 +16,25 @@ ds
 * [Questions](#questions)
 
 # Installation
-dd
+open a terminal. type "node index.js" follow prompts
 
 # Usage
-d
+Run Node.js
 
 # License
 - Additional information on chosen license:
-Apache
-https://opensource.org/licenses/Apache-2.0
+MIT
+https://opensource.org/licenses/MIT
 
 # Contribution
-d
+none at the moment
 
 # Test
-No test
+Use Jest for testing
 
 # Questions
 
-If you have any questions, please contact at: d
+If you have any questions, please contact at: wagner.s.gabriel@gmail.com
 
-GitHub: [d](https://github.com/d)
+GitHub: [wagnergabe](https://github.com/wagnergabe)
 
