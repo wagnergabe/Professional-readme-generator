@@ -1,6 +1,9 @@
 
 ![Untitled_ Jul 2, 2022 10_41 PM](https://user-images.githubusercontent.com/102180936/177023647-5a18ba53-849b-445d-a69c-7839da67c142.gif)
 
+# Link to Full video walkthrough
+https://drive.google.com/file/d/1_HWCO-UsYM3UYS-tDoSxOEPoig-J2gaf/view
+
 
 # Screenshot
 ![image](https://user-images.githubusercontent.com/102180936/177023689-f1d242ef-bfce-490b-8b7b-f864433c36c2.png)
