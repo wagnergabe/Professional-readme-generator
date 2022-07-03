@@ -45,8 +45,7 @@ if (license) {
 function generateMarkdown(data) {
     renderLicenseBadge()
     return `
-# Project Title
-${data.title}
+# ${data.title}
 
 ${renderLicenseBadge(data.license)}
 

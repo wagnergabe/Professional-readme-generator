@@ -1,11 +1,10 @@
 
-# Project Title
-Readme Generator
+# Readme Generator
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 
 # Description
-Create a custom Readme
+Create a custom Readme file
 
 ## Table of Contents
 * [Installation](#installation)
@@ -16,10 +15,10 @@ Create a custom Readme
 * [Questions](#questions)
 
 # Installation
-open a terminal. type "node index.js" follow prompts
+Open a local terminal. type "node index.js", and follow the command prompts
 
 # Usage
-Run Node.js
+Use node.js
 
 # License
 - Additional information on chosen license:
@@ -27,7 +26,7 @@ MIT
 https://opensource.org/licenses/MIT
 
 # Contribution
-none at the moment
+No other contributors involved
 
 # Test
 Use Jest for testing
