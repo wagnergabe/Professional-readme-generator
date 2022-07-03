@@ -14,7 +14,7 @@ const generateMarkdown = require('./utils/generateMarkdown');
 //(DONE)------same with email
 //(DONE)------links (a) to sections of README
 
-//Video showing prompts 
+//(In Progress) Video showing prompts 
 const questions = [
 {
         type: 'input',
