@@ -18,7 +18,7 @@ function renderLicenseBadge(license) {
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-    if (license === "MIT") {
+        if (license === "MIT") {
         return "https://opensource.org/licenses/MIT";
       } else if (license === "Apache") {
         return "https://opensource.org/licenses/Apache-2.0";
@@ -32,7 +32,12 @@ function renderLicenseLink(license) {
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-// function renderLicenseSection(license)
+function renderLicenseSection(license) {
+if (license) {
+} else {
+    return "";
+}
+}
 //Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
 
 // TODO: Create a function to generate markdown for README
@@ -41,12 +46,14 @@ function generateMarkdown(data) {
     return `
 # Project Title
 ${data.title}
+
 ${renderLicenseBadge(data.license)}
-# Descritption
+
+# Description
 ${data.description}
 
 ## Table of Contents
-* [Installation](#Installation)
+* [Installation](#installation)
 * [Usage](#usage)
 * [License](#license)
 * [Contribution](#contribution)
@@ -60,6 +67,9 @@ ${data.installation}
 ${data.usage}
 
 # License
+- Additional information on chosen license:
+${renderLicenseSection(data.license)}
+${renderLicenseLink(data.license)}
 
 # Contribution
 ${data.contribution}
@@ -67,7 +77,7 @@ ${data.contribution}
 # Test
 ${data.test}
 
-#{Questions}
+# Questions
 
 If you have any questions, please contact at: ${data.user_email}\n
 GitHub: [${data.github_name}](https://github.com/${data.github_name})\n

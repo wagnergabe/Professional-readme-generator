@@ -7,12 +7,12 @@ const generateMarkdown = require('./utils/generateMarkdown');
 //Criteria Needed:
 //(DONE)------Title of project 
 //(DONE)------sections entitled Description*, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
-//Input method for above section
+//(DONE}-------Input method for above section
 //(DONE)-------license for the application from a list of options (li)
 //(DONE)------license badge
 //(DONE)-------input username(Github)- added to the section of the README entitled Questions, with a link to github profile
 //(DONE)------same with email
-//links (a) to sections of README
+//(DONE)------links (a) to sections of README
 
 //Video showing prompts 
 const questions = [
