@@ -11,21 +11,30 @@ function renderLicenseBadge(license) {
     } else {
         return "";
     }
-    }
+};
 
 //!!!Call this at the end of the question prompts to generage a badge
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-    var l
+    if (license === "MIT") {
+        return "https://opensource.org/licenses/MIT";
+      } else if (license === "Apache") {
+        return "https://opensource.org/licenses/Apache-2.0";
+      } else if (license === "Mozilla") {
+        return "https://opensource.org/licenses/MPL-2.0";
+      } else {
+        return "";
+      }
     }
 
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(licenses) {}
-
+function renderLicenseSection(licenses) {
+return license !== "none" ? `${license}\n${renderLicenseLink(license)}` : "";
+}
 //Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
 
 // TODO: Create a function to generate markdown for README
@@ -40,6 +49,7 @@ function generateMarkdown(data) {
     ## Table of Contents
     *[Installation](#Installation)
     *[Usage](#usage)
+    *[License](#license)
     *[Contribution](#contribution)
     *[Test](#test)
     *[Questions](#questions)
@@ -49,6 +59,9 @@ function generateMarkdown(data) {
 
     ## Usage
     ${data.usage}
+
+    ## License
+    ${renderLicenseLink(license)}
 
     ## Contribution
     ${data.contribution}

@@ -6,10 +6,10 @@ const generateMarkdown = require('./utils/generateMarkdown');
 
 //Criteria Needed:
 //(DONE)------Title of project 
-//sections entitled Description*, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
+//(DONE)------sections entitled Description*, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
 //Input method for above section
 //(DONE)-------license for the application from a list of options (li)
-//license badge
+//(DONE)------license badge
 //(DONE)-------input username(Github)- added to the section of the README entitled Questions, with a link to github profile
 //(DONE)------same with email
 //links (a) to sections of README
@@ -68,6 +68,20 @@ const questions = [
     },
     {
         type: 'input',
+        name: 'contribution',
+        message: 'Any contributions or other developers involved?'
+    },
+    {
+        type: 'list',
+        name: 'test',
+        message: 'Would you like to use a test framework known as Jest?',
+        choices: [
+            "No test",
+            "Use Jest for testing"
+        ]
+    },
+    {
+        type: 'input',
         name: "github_name",
         message: "Please provide your GitHub username",
         validate: githubInput => {
@@ -98,7 +112,7 @@ const questions = [
         choices: [
             "Apache",
             "MIT",
-            "GPL",
+            "Mozilla",
             "none" 
         ]
     }
