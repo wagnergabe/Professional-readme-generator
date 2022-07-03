@@ -3,7 +3,11 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
     if (license === "MIT") {
-        return `![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)`
+        return `![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)`;
+    } else if (license === "Apache") {
+        return `![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-yellow.svg)`;
+    } else if (license === "Mozilla") {
+        return `![License: Mozilla 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)`;
     } else {
         return "";
     }
