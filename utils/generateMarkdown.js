@@ -32,47 +32,46 @@ function renderLicenseLink(license) {
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(licenses) {
-return license !== "none" ? `${license}\n${renderLicenseLink(license)}` : "";
-}
+// function renderLicenseSection(license)
 //Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
     renderLicenseBadge()
     return `
-    # Project Title
-    ${data.title}
-    ${renderLicenseBadge(data.license)}
-    ${data.description}
+# Project Title
+${data.title}
+${renderLicenseBadge(data.license)}
+# Descritption
+${data.description}
 
-    ## Table of Contents
-    *[Installation](#Installation)
-    *[Usage](#usage)
-    *[License](#license)
-    *[Contribution](#contribution)
-    *[Test](#test)
-    *[Questions](#questions)
+## Table of Contents
+* [Installation](#Installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contribution](#contribution)
+* [Test](#test)
+* [Questions](#questions)
 
-    ## Installation
-    ${data.installation}
+# Installation
+${data.installation}
 
-    ## Usage
-    ${data.usage}
+# Usage
+${data.usage}
 
-    ## License
-    ${renderLicenseLink(license)}
+# License
 
-    ## Contribution
-    ${data.contribution}
+# Contribution
+${data.contribution}
 
-    ## Test
-    ${data.test}
+# Test
+${data.test}
 
-    #{Questions}
-    Please contact at: ${data.user_email}/n
-    GitHub: [${data.githubInput}](https://github.com/${data.githubInput})\n
-    `
+#{Questions}
+
+If you have any questions, please contact at: ${data.user_email}\n
+GitHub: [${data.github_name}](https://github.com/${data.github_name})\n
+`
 }
 
 
