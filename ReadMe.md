@@ -1,11 +1,11 @@
 
 # Project Title
-Fart Farty Project X
+dfas
 
-![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
+![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-yellow.svg)
 
-# Descritption
-How to make stinky farts
+# Description
+agd
 
 ## Table of Contents
 * [Installation](#installation)
@@ -16,25 +16,25 @@ How to make stinky farts
 * [Questions](#questions)
 
 # Installation
-Open a terminal, run node index.js. follow prompt
+ag
 
 # Usage
-Use node.js
+ag
 
 # License
 - Additional information on chosen license:
-undefined
-https://opensource.org/licenses/MIT
+true
+https://opensource.org/licenses/Apache-2.0
 
 # Contribution
-Claude (master developer)
+adga
 
 # Test
-Use Jest for testing
+No test
 
 # Questions
 
-If you have any questions, please contact at: harrypotter@hotmail.com
+If you have any questions, please contact at: dfa
 
-GitHub: [harrypotter](https://github.com/harrypotter)
+GitHub: [af](https://github.com/af)
 
